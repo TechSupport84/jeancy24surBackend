@@ -10,6 +10,8 @@ const db   = require("./models")
 const postRouter = require("./routes/post");
 const commentRouter = require("./routes/comment")
 const orderRouter = require("./routes/order");
+const partenariatRouter = require("./routes/partenariat")
+const applicationRouter = require("./routes/application")
 
 
 app.use(express.json())
@@ -19,9 +21,8 @@ app.use("/api/post",postRouter);
 app.use("/images",express.static(path.join(__dirname, 'public', 'Images')))
 app.use("/api/comment",commentRouter)
 app.use("/api/order",orderRouter);
-
-
-
+app.use("/api/partenariat",partenariatRouter)
+app.use("/api/application/",applicationRouter);
 
 
 db.sequelize.sync().then(()=>{
