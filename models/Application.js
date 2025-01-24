@@ -16,13 +16,17 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        resumeAndCover: {  
+        image: {  
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         additionalField: {
             type: DataTypes.TEXT,
-            allowNull: true
+            allowNull: false
+        },
+       link: {
+            type: DataTypes.TEXT,
+            allowNull: false
         },
     });
     
